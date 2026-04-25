@@ -3,7 +3,7 @@ import LaunchWizard from './LaunchWizard'
 import TokenPreview from './TokenPreview'
 import WalletSimulator from './WalletSimulator'
 import RecentLaunches from './RecentLaunches'
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
+
 import { useWallet } from '@solana/wallet-adapter-react'
 
 const NAV = [
