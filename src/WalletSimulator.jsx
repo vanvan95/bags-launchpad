@@ -11,7 +11,7 @@ export default function WalletSimulator({ balance, launchCost, onLaunch, onBack 
   }
 
   return (
-    <div style={{ maxWidth: 480, margin: '0 auto', position: 'relative' }}>
+    <div style={{ maxWidth: 480, margin: '0 auto', position: 'relative', background: '#080c12', minHeight: '60vh', padding: '20px 0' }}>
 
       {/* Custom wallet picker modal */}
       {showPicker && (
