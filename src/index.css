@@ -7,7 +7,6 @@ body { margin: 0; }
   min-height: 100vh;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
   /* Ẩn sidebar */
   body > div > div > div:first-child {
@@ -28,44 +27,12 @@ body { margin: 0; }
   body > div > div > div:last-child > div:last-child {
     padding: 12px !important;
   }
-  /* Grid cards 2 cột thay vì 4 */
+  /* Grid cards 2 cột */
   div[style*="repeat(4, 1fr)"] {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  /* Form 1 cột thay vì 2 */
+  /* Form 1 cột */
   div[style*="repeat(2, 1fr)"] {
     grid-template-columns: 1fr !important;
   }
-}
-/* Fix Solana wallet modal on mobile */
-.wallet-adapter-modal-wrapper {
-  background: #1a1a2e !important;
-  border-radius: 16px !important;
-  border: 1px solid rgba(249,115,22,0.3) !important;
-}
-
-.wallet-adapter-modal {
-  background: rgba(0,0,0,0.85) !important;
-}
-
-.wallet-adapter-modal-button-close {
-  background: rgba(255,255,255,0.1) !important;
-}
-
-.wallet-adapter-button {
-  background: rgba(255,255,255,0.06) !important;
-  border: 1px solid rgba(255,255,255,0.12) !important;
-  border-radius: 12px !important;
-  color: #fff !important;
-  font-weight: 600 !important;
-}
-
-.wallet-adapter-button:hover {
-  background: rgba(249,115,22,0.15) !important;
-  border-color: rgba(249,115,22,0.4) !important;
-}
-
-.wallet-adapter-modal-title {
-  color: #fff !important;
-  font-size: 20px !important;
 }
