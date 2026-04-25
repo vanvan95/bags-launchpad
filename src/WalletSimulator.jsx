@@ -5,7 +5,20 @@ export default function WalletSimulator({ balance, launchCost, onLaunch, onBack 
   const { connected, publicKey, select, wallets, disconnect } = useWallet()
   const [showPicker, setShowPicker] = useState(false)
 
-  function handleSelectWallet(walletName) {
+function handleSelectWallet(walletName) {
+    const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent)
+    
+    if (isMobile && walletName === 'Phantom') {
+      const currentUrl = encodeURIComponent(window.location.href)
+      window.location.href = `https://phantom.app/ul/browse/${currentUrl}?ref=${currentUrl}`
+      return
+    }
+    
+    if (isMobile && walletName === 'Solflare') {
+      window.location.href = `https://solflare.com/ul/v1/browse/${encodeURIComponent(window.location.href)}`
+      return
+    }
+    
     select(walletName)
     setShowPicker(false)
   }

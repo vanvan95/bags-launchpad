@@ -157,15 +157,15 @@ export default function App() {
             })}
           </div>
 
-          {/* REAL Solana Wallet Button */}
-          <WalletMultiButton style={{
-            background: connected ? 'rgba(16,185,129,0.12)' : 'rgba(249,115,22,0.12)',
-            border: `1px solid ${connected ? 'rgba(16,185,129,0.35)' : 'rgba(249,115,22,0.35)'}`,
-            borderRadius: 8, fontSize: 13, fontWeight: 700,
-            color: connected ? '#10b981' : '#f97316',
-            height: 36, padding: '0 14px',
-            fontFamily: '"DM Sans","Segoe UI",sans-serif',
-          }} />
+          <button onClick={() => { setStep(3); setActiveNav('wallet') }} style={{
+  background: connected ? 'rgba(16,185,129,0.12)' : 'rgba(249,115,22,0.12)',
+  border: `1px solid ${connected ? 'rgba(16,185,129,0.35)' : 'rgba(249,115,22,0.35)'}`,
+  borderRadius: 8, fontSize: 13, fontWeight: 700,
+  color: connected ? '#10b981' : '#f97316',
+  height: 36, padding: '0 14px', cursor: 'pointer'
+}}>
+  {connected ? `✓ ${publicKey?.toString().slice(0,4)}...${publicKey?.toString().slice(-4)}` : 'Select Wallet'}
+</button>
         </div>
 
         <div style={{ flex: 1, overflowY: 'auto', padding: '20px 24px' }}>
